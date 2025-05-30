@@ -61,12 +61,15 @@ function playGame() {
     console.log("Final Score: Human " + humanScore + ", Computer " + computerScore);
     if (humanScore > computerScore) {
         console.log("You win the game!");
+        alert("Final Score: Human " + humanScore + ", Computer " + computerScore+ "\n" +"You win the game!");
     }
     else if (humanScore < computerScore) {
         console.log("You lose the game!");
+        alert("Final Score: Human " + humanScore + ", Computer " + computerScore+ "\n" + "You lose the game!");
     }
     else {
-        console.log("The game is a tie!");
+        console.log("Final Score: Human " + humanScore + ", Computer " + computerScore+ "\n" + "The game is a tie!");
+        alert("Final Score: Human " + humanScore + ", Computer " + computerScore+ "\n" + "The game is a tie!");
     }
     console.log("###################################");
 }
