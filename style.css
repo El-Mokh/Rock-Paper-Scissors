@@ -1,0 +1,62 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#choices {
+    margin: 20px 0;
+}
+
+#choices button {
+    background: #ffffff10;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#choices button:hover {
+    background-color: #ffffff30;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+#choices button:active {
+    transform: scale(0.95);
+    background-color: #ffffff50;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+#results {
+    font-size: 22px;
+    margin-top: 30px;
+    background-color: #ffffff10;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 100px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Optional visual feedback for win/lose/tie */
+.win {
+    background-color: rgba(0, 255, 0, 0.1);
+    color: #00ff90;
+}
+
+.lose {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #ff5e5e;
+}
+
+.tie {
+    background-color: rgba(255, 255, 0, 0.1);
+    color: #ffff66;
+}

@@ -15,9 +15,10 @@ let computerScore = 0;
 const result = document.querySelector("#results")
 
 function playRound(humanChoice, computerChoice) {
-    
-    result.textContent = "";
+    result.className = ""; // reset previous class
+
     if (humanChoice === computerChoice) {
+        result.classList.add("tie");
         result.innerHTML = "It's a tie! <br>" + `Human : ${humanScore} | Computer : ${computerScore}`;
         return "tie";
     } else if (
@@ -25,14 +26,18 @@ function playRound(humanChoice, computerChoice) {
         (humanChoice === "paper" && computerChoice === "rock") ||
         (humanChoice === "scissors" && computerChoice === "paper")
     ) {
-        humanScore ++;
-        result.innerHTML = "You win! " + humanChoice + " beats " + computerChoice + `<br> Human : ${humanScore} | Computer : ${computerScore}`;
-
+        humanScore++;
+        result.classList.add("win");
+        result.innerHTML = "You win! " + humanChoice + " beats " + computerChoice +
+            `<br> Human : ${humanScore} | Computer : ${computerScore}`;
     } else {
         computerScore++;
-        result.innerHTML ="You lose! " + computerChoice + " beats " + humanChoice + `<br> Human : ${humanScore} | Computer : ${computerScore}`;
+        result.classList.add("lose");
+        result.innerHTML = "You lose! " + computerChoice + " beats " + humanChoice +
+            `<br> Human : ${humanScore} | Computer : ${computerScore}`;
     }
 }
+
 
 
 const choice = document.querySelector("#choices");
